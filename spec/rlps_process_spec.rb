@@ -1,7 +1,7 @@
-require 'rps'
-RSpec.describe RPS::Process do
+require 'rlps'
+RSpec.describe RLPS::Process do
   let(:process) do
-    RPS::Process.new name: 'systemd', pid: 1
+    RLPS::Process.new name: 'systemd', pid: 1
   end
   it 'Should accept only two or zero arguments :name and :pid' do
     expect(process.pid).to eq(1)

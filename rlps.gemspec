@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rps/version'
+require 'rlps/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'rps'
-  spec.version       = RPS::VERSION
+  spec.name = 'rlps'
+  spec.version       = RLPS::VERSION
   spec.authors       = ['Ahmed Khaled']
   spec.email         = ['nemoload@aol.com']
 

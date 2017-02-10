@@ -1,9 +1,9 @@
-require 'rps/version'
-require 'rps/process'
-require 'rps/string'
-require 'rps/helper/parser'
+require 'rlps/version'
+require 'rlps/process'
+require 'rlps/string'
+require 'rlps/helper/parser'
 
-module RPS
+module RLPS
   class << self
     attr_accessor :processes
   end
@@ -25,7 +25,7 @@ module RPS
   def self.parse_processes
     processes_arr = []
     Dir.entries('/proc/').each do |dir|
-      processes_arr << RPS::Parser.process_from_dir(dir) if dir.int?
+      processes_arr << RLPS::Parser.process_from_dir(dir) if dir.int?
     end
     processes_arr
   end

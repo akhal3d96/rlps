@@ -1,13 +1,13 @@
-# RPS
+# RLPS
 
-**RPS** is a very simple and pure Ruby gem which sole prupose is to get a **list** of the currently **running processes** in a **Linux** system by reading data from Linux /proc/ directory.
+**RLPS** is a very simple and pure Ruby gem which sole prupose is to get a **list** of the currently **running processes** in a **Linux** system by reading data from Linux /proc/ directory.
 More information read The Linux Documentation Project [topic](http://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html) on this subject.
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rps'
+gem 'rlps'
 ```
 
 And then execute:
@@ -16,30 +16,30 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install rps
+    $ gem install rlps
 
 ## Documentation
-See https://nemoload.github.io/rps/
+See https://nemoload.github.io/rlps/
 ## Usage
 ``` ruby
-require 'rps'
+require 'rlps'
 
-my_processes = RPS.processes
+my_processes = RLPS.processes
 
 p my_processes[0]       # => systemd: 1
 p my_processes[0].name  # => systemd
 p my_processes[0].pid   # => 1
 ```
-Returns a list of [RPS::Process](http://www.github.com/nemoload) objects.
+Returns a list of [RLPS::Process](http://www.github.com/nemoload) objects.
 ## CLI
 **TL;DR: Don't.** 
 Although this gem wasn't made to be used as a CLI application, it can act as a very bad, ineffecient version of Linux ``` $ ps -e ```:
           
-    $ rps
+    $ rlps
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/nemoload/rps.
+Bug reports and pull requests are welcome on GitHub at https://github.com/nemoload/rlps.
 
 
 ## License

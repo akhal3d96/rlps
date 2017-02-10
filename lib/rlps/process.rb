@@ -1,13 +1,13 @@
-module RPS
+module RLPS
   ##
   # Represents a process
   ##
   class Process
     attr_reader :name, :pid
     # Takes two arguments _:name_ and _:pid_
-    # If called without any arguments it calls RPS::Process.this_process.
+    # If called without any arguments it calls RLPS::Process.this_process.
     # ==== Examples
-    # RPS::Process.new name: "ruby", pid: 2365
+    # RLPS::Process.new name: "ruby", pid: 2365
     def initialize(**args)
       #-- other = args.select { |k, _v| ((k == :name) &&
       # !args[k].nil?) || ((k == :pid) && !args[k].nil?) }
@@ -27,7 +27,7 @@ module RPS
 
     # Returns true if the process is still running.
     def still_running?
-      !RPS.processes.select do |p|
+      !RLPS.processes.select do |p|
         p.pid == @pid &&
           p.name.casecmp(@name.downcase).zero?
       end.empty?
@@ -40,10 +40,10 @@ module RPS
       ::Process.kill(signal, @pid)
     end
 
-    # Return this process RPS::Process object.
+    # Return this process RLPS::Process object.
     def self.this_process
-      process = RPS.processes.select { |p| p.pid == ::Process.pid }
-      RPS::Process.new name: process[0].name, pid: ::Process.pid
+      process = RLPS.processes.select { |p| p.pid == ::Process.pid }
+      RLPS::Process.new name: process[0].name, pid: ::Process.pid
     end
 
     def self.get(name: nil, pid: nil) #:nodoc:
