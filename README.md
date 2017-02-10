@@ -18,6 +18,8 @@ Or install it yourself as:
 
     $ gem install rps
 
+## Documentation
+See https://nemoload.github.io/rps/
 ## Usage
 ``` ruby
 require 'rps'
@@ -30,15 +32,10 @@ p my_processes[0].pid   # => 1
 ```
 Returns a list of [RPS::Process](http://www.github.com/nemoload) objects.
 ## CLI
-**TL;DR Don't.** 
+**TL;DR: Don't.** 
 Although this gem wasn't made to be used as a CLI application, it can act as a very bad, ineffecient version of Linux ``` $ ps -e ```:
           
     $ rps
-          
-## Development
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
