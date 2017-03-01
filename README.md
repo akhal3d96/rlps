@@ -20,11 +20,11 @@ Or install it yourself as:
     $ gem install rlps
 
 ## Documentation
-See https://nemoload.github.io/rlps/
+See http://www.rubydoc.info/gems/rlps/
 ## Usage
 ``` ruby
 # There are other helpful methods in addition to the ones I showed here.
-# See https://nemoload.github.io/rlps/ for full documentation 
+# See http://www.rubydoc.info/gems/rlps/ for full documentation 
 
 require 'rlps'
 
