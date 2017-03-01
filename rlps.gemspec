@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ['nemoload@aol.com']
 
   spec.summary       = 'Pure Ruby impelementation to walk through Linux\'s proc'
-  spec.description   = 'A pure and intutive way to walk \
-                        through the current running processes \
+  spec.description   = 'A pure and intutive way to walk
+                        through the current running processes 
                         on Linux machine'
   spec.homepage      = 'https://nemoload.github.io'
   spec.license       = 'MIT'

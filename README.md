@@ -22,15 +22,25 @@ Or install it yourself as:
 See https://nemoload.github.io/rlps/
 ## Usage
 ``` ruby
+# There are other helpful methods in addition to the ones I showed here.
+# See https://nemoload.github.io/rlps/ for full documentation 
+
 require 'rlps'
 
 my_processes = RLPS.processes
 
-p my_processes[0]       # => systemd: 1
-p my_processes[0].name  # => systemd
-p my_processes[0].pid   # => 1
+my_processes.first            # => systemd: 1
+my_processes.first.name  # => systemd
+my_processes.first.pid     # => 1
+my_process.class            # => Array
+my_process.length          # => 150
+ 
+#   #is_running? method is useful in daemons
+my_process = RLPS.this_process
+my_process.is_running?   # => true
+john_cena_process = RLPS::Process.new pid:619, name: "cena"
+john_cena_process.is_running?  # => false
 ```
-Returns a list of [RLPS::Process](http://www.github.com/nemoload) objects.
 ## CLI
 **TL;DR: Don't.**
 Although this gem wasn't made to be used as a CLI application, it can act as a very bad, inefficient version of Linux ``` $ ps -e ```:
