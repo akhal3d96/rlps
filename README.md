@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/rlps.svg)](https://badge.fury.io/rb/rlps)
 # RLPS
 
 **RLPS** is a very simple and pure Ruby gem which sole purpose is to get a **list** of the currently **running processes** in a **Linux** system by reading data from Linux /proc/ directory.
