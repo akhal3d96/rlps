@@ -15,6 +15,12 @@ module RLPS
     @processes ||= parse_processes
   end
 
+  # Return this process RLPS::Process object.
+  def this_process
+    process = RLPS.processes.select { |p| p.pid == ::Process.pid }
+    RLPS::Process.new name: process[0].name, pid: ::Process.pid
+  end
+
   # Update the already fetched processes list.
   def update!
     @process = parse_processes

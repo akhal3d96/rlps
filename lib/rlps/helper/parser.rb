@@ -2,7 +2,6 @@ require 'rlps/string'
 require 'rlps/process'
 
 module RLPS
-
   # This class parses Linux's /proc/ directory status file.
   class Parser
     # This method gets a /proc/ directory, then it parses
@@ -17,6 +16,7 @@ module RLPS
         end
       end
       RLPS::Process.new name: status['Name'], pid: status['Pid'].to_i
+      # TODO: add more information
     end
   end
 end
