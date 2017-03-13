@@ -22,7 +22,7 @@ module RLPS
     end
 
     def ==(obj)
-      obj.pid == @pid && obj.name.casecmp(@name).zero?
+      obj.name.casecmp(@name).zero?
     end
 
     def to_i
