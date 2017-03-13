@@ -24,7 +24,7 @@ See http://www.rubydoc.info/gems/rlps/
 ## Usage
 ``` ruby
 # There are other helpful methods in addition to the ones I showed here.
-# See http://www.rubydoc.info/gems/rlps/ for full documentation 
+# See http://www.rubydoc.info/gems/rlps/ for full documentation
 
 require 'rlps'
 
@@ -37,12 +37,12 @@ my_process.class            # => Array
 my_process.length          # => 150
 
 # KDE Spectacle sometimes remains hidden after saving a screenshot
-# When accumlated, it consumes too much from the RAM.
+# When accumulated, it consumes too much from the RAM.
 RLPS.processes.select{ |pr| pr.name=='spectacle' }.length  # => 3
 RLPS.processes.select{ |pr| pr.name=='spectacle' }.each{ |pr| pr.kill! }
 RLPS.processes.select{ |pr| pr.name=='spectacle' }.length  # => 0
- 
- 
+
+
 #   #is_running? method is useful in daemons
 my_process = RLPS.this_process
 my_process.is_running?   # => true
