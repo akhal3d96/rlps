@@ -12,7 +12,7 @@ module RLPS
 
   # Get the currently runing processes as a list.
   def processes
-    @processes ||= parse_processes
+    @processes = parse_processes
   end
 
   # Return this process RLPS::Process object.

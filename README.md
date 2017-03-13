@@ -35,6 +35,13 @@ my_processes.first.name  # => systemd
 my_processes.first.pid     # => 1
 my_process.class            # => Array
 my_process.length          # => 150
+
+# KDE Spectacle sometimes remains hidden after saving a screenshot
+# When accumlated, it consumes too much from the RAM.
+RLPS.processes.select{ |pr| pr.name=='spectacle' }.length  # => 3
+RLPS.processes.select{ |pr| pr.name=='spectacle' }.each{ |pr| pr.kill! }
+RLPS.processes.select{ |pr| pr.name=='spectacle' }.length  # => 0
+ 
  
 #   #is_running? method is useful in daemons
 my_process = RLPS.this_process

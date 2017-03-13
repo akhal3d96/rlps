@@ -13,8 +13,8 @@ module RLPS
       # !args[k].nil?) || ((k == :pid) && !args[k].nil?) }
       # raise if (other.count == 0) || (args.count != 2)
       # TODO check if this process actually exists
-      @name = args[:name] || this_process.name
-      @pid = args[:pid] || this_process.pid
+      @name = args[:name] || RLPS.this_process.name
+      @pid = args[:pid]   || RLPS.this_process.pid
     end
 
     def to_s
