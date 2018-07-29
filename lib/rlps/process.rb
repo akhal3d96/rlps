@@ -22,6 +22,7 @@ module RLPS
     end
 
     def ==(obj)
+      return obj.casecmp(@name).zero? if obj.class == 'String'
       obj.name.casecmp(@name).zero?
     end
 
@@ -40,8 +41,6 @@ module RLPS
     def kill!(signal = 'INT')
       ::Process.kill(signal, @pid)
     end
-
-
 
     alias inspect to_s
   end
